@@ -9,6 +9,9 @@
     "lint": "next lint"
   },
   "proxy": "https://health-care-app-backend.onrender.com/",
+  "engines": {
+    "node": ">=20"
+  },
   "dependencies": {
     "@reduxjs/toolkit": "^1.9.6",
     "axios": "^1.5.1",
