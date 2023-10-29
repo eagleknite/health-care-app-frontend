@@ -128,35 +128,3 @@ const doctorSlice = createSlice({
 });
 
 export default doctorSlice.reducer;
-
-
-/*// update doctor time slots
-export const updateDoctorTimeSlots = createAsyncThunk(
-  'doctors/updateDoctorTimeSlots',
-  async ({ id, timeSlotData }) => {
-    try {
-      const token = localStorage.getItem('token');
-      if (!token) {
-        throw new Error('No token found');
-      }
-    
-      const response = await axios.put(`http://localhost:5000/api/doctors/${id}/timeSlots`, timeSlotData, {
-        headers: {
-          'Authorization': `Bearer ${token}`  // Pass token in header
-        }
-      }); // Remove leading '/'
-      return response.data;
-    } catch (error) {
-      console.error(error);
-      throw error;
-    }
-  }
-);
-
-.addCase(updateDoctorTimeSlots.fulfilled, (state, action) => {
-        const index = state.doctors.findIndex(doc => doc._id === action.payload._id);
-        if (index !== -1) {
-          state.doctors[index] = action.payload;
-        }
-      });
-*/

@@ -12,7 +12,7 @@ const DoctorsList = () => {
 
   useEffect(() => {
     dispatch(fetchDoctors());
-  }, []);
+  }, [dispatch]);
   
   const handleDelete = async (id) => {
     await dispatch(deleteDoctor(id));

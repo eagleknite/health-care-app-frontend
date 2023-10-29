@@ -19,7 +19,7 @@ const EditPatient = ({ patientId }) => {
       setCurrentId(router.query.id || patientId); // <-- Also check patientId prop
       // console.log("ID set:", router.query.id || patientId);
     }
-  }, [router.query.id, patientId]); // <-- Add patientId to the dependency array
+  }, [router.query.id, patientId, currentId]); // <-- Add patientId to the dependency array
 
   useEffect(() => {
     console.log("Inside useEffect");
@@ -30,7 +30,7 @@ const EditPatient = ({ patientId }) => {
     } else {
       // console.log("Patient ID not available yet");
     }
-  }, [currentId]);
+  }, [currentId, dispatch]);
 
   if (loading === 'loading' || !existingPatient) {
     return <p>Loading...</p>;

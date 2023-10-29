@@ -1,5 +1,4 @@
 // pages\patients\index.js
-import PatientsList from "./PatientsList";
 import Link from "next/link";
 
 const PatientsPage = () => {
@@ -9,7 +8,6 @@ const PatientsPage = () => {
       <Link href="/patients/create">
         <button>Create New Patient</button>
       </Link>
-      <PatientsList />
     </div>
   );
 };

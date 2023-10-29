@@ -1,6 +1,5 @@
 // pages\doctors\index.js
 import DoctorsList from './DoctorsList';
-import TimeSlotList from './TimeSlotList';
 import Link from 'next/link';
 
 const DoctorsPage = () => {
@@ -11,7 +10,6 @@ const DoctorsPage = () => {
         <button>Create New Doctor</button>
       </Link>
       <DoctorsList />
-      <TimeSlotList />
     </div>
   );
 };

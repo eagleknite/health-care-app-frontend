@@ -23,13 +23,13 @@ const Profile = () => {
       }
     };
     fetchUser();
-  }, []); 
+  }, [dispatch]); 
 
   const renderEditProfileBasedOnRole = () => {
     if (!user || !user.role) return <p>Loading...</p>;
     switch (user.role) {
       case 'Admin':
-        return <p>Welcome Admin! There's nothing to update here.</p>;
+        return <p>Welcome Admin! There&apos;s  nothing to update here.</p>;
       case 'Doctor':
         return <EditDoctor existingDoctor={user} doctorId={user.id} />;
       case 'Patient':

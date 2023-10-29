@@ -24,10 +24,6 @@ const DoctorForm = ({ existingDoctor }) => {
   const [start, setStart] = useState("");
   const [end, setEnd] = useState("");
 
-  if (!existingDoctor) {
-    return <p>Loading...</p>;
-  }
-
   const user = useSelector(state => state.auth.user);
 
   useEffect(() => {
@@ -38,6 +34,10 @@ const DoctorForm = ({ existingDoctor }) => {
       });
     }
   }, [existingDoctor]);
+
+  if (!existingDoctor) {
+    return <p>Loading...</p>;
+  }
 
   const handleAddTimeSlot = () => {
     if (!start || !end) {

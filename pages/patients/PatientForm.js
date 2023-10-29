@@ -14,10 +14,6 @@ const PatientForm = ({ existingPatient }) => {
   const router = useRouter();
   const user = useSelector(state => state.auth.user);
 
-  if (!existingPatient) {
-    return <p>Loading...</p>;
-  }
-
   useEffect(() => {
     if (existingPatient) {
       setFormData({
@@ -26,6 +22,11 @@ const PatientForm = ({ existingPatient }) => {
       });
     }
   }, [existingPatient]);
+
+
+  if (!existingPatient) {
+    return <p>Loading...</p>;
+  }
 
   const handleChange = (e) => {
     const { name, value } = e.target;

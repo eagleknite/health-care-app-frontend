@@ -35,7 +35,7 @@ const Register = () => {
             router.push('/dashboard');
         }
       }
-  }, [isAuthenticated]);
+  }, [isAuthenticated, user, router]);
 
 
 

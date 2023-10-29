@@ -17,7 +17,7 @@ const EditDoctor = ({ doctorId }) => {
       setCurrentId(router.query.id || doctorId); // <-- Also check doctorId prop
       // console.log("ID set:", router.query.id || doctorId);
     }
-  }, [router.query.id, doctorId]);  // <-- Add doctorId to the dependency array
+  }, [router.query.id, doctorId, currentId]);  // <-- Add doctorId to the dependency array
 
   useEffect(() => {
     console.log("Inside useEffect");
@@ -28,7 +28,7 @@ const EditDoctor = ({ doctorId }) => {
     } else {
       // console.log("Doctor ID not available yet");
     }
-  }, [currentId]); 
+  }, [currentId, dispatch]); 
 
   const { doctors, loading } = useSelector(state => state.doctors);
   const existingDoctor = doctors.find(doc => doc._id === currentId);

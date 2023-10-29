@@ -21,7 +21,8 @@ const AppointmentsList = () => {
     } else if (userRole === 'Admin') {
       dispatch(fetchAppointments());
     }
-  }, [userRole]);
+  }, [userRole, dispatch]);
+
 
   if (loading === 'loading') return <p>Loading...</p>;
   if (error) return <p>Error: {error}</p>;

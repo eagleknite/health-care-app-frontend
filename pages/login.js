@@ -31,7 +31,7 @@ const Login = () => {
             router.push('/dashboard');
         }
       }
-  }, [isAuthenticated]);
+  }, [isAuthenticated, user, router]);
 
 
   

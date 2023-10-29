@@ -74,8 +74,15 @@ const AppointmentForm = ({ existingAppointment }) => {
   // console.log('bookedAppointments:', bookedAppointments);
 
   // Fetch doctor's availability based on the selected doctor from the form
-  const selectedDoctor = doctors.find(doctor => doctor._id === formData.doctorId);
-  const selectedDoctorAvailability = selectedDoctor ? selectedDoctor.availability : [];
+  const selectedDoctor = useMemo(() => 
+  doctors.find(doctor => doctor._id === formData.doctorId),
+  [formData.doctorId, doctors]
+);
+
+const selectedDoctorAvailability = useMemo(() => 
+  selectedDoctor ? selectedDoctor.availability : [],
+  [selectedDoctor]
+);
 
   const availableTimeSlots = useMemo(() => {
     const selectedDay = moment(startDate).format('dddd');
