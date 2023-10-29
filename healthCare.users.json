@@ -1,0 +1,60 @@
+[{
+  "_id": {
+    "$oid": "651d8df51545e0651edf4c76"
+  },
+  "email": "xcfffffgytr@gmail.com",
+  "password": "ddeodddddicccdded",
+  "role": "Admin",
+  "firstName": "ecjccjd",
+  "lastName": "wdffvvc",
+  "authMethods": [
+    {
+      "type": "Local",
+      "id": "xcfffffgytr@gmail.com",
+      "_id": {
+        "$oid": "651d8df51545e0651edf4c77"
+      }
+    }
+  ],
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "651dc20c0609955e0a87a11f"
+  },
+  "email": "xcfffffgytr@outlook.com",
+  "password": "ddeodddddicccdded",
+  "role": "Patient",
+  "firstName": "rtggdx",
+  "lastName": "okhfdd",
+  "authMethods": [
+    {
+      "type": "Local",
+      "id": "xcfffffgytr@outlook.com",
+      "_id": {
+        "$oid": "651dc20c0609955e0a87a120"
+      }
+    }
+  ],
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "651e5d4f1b5d0cbe22d660a0"
+  },
+  "email": "xcfffffgytr@yahoo.com",
+  "password": "ddeodddddicccdded",
+  "role": "Doctor",
+  "firstName": "erfkvcdk",
+  "lastName": "oijsnnf",
+  "authMethods": [
+    {
+      "type": "Local",
+      "id": "xcfffffgytr@yahoo.com",
+      "_id": {
+        "$oid": "651e5d4f1b5d0cbe22d660a1"
+      }
+    }
+  ],
+  "__v": 0
+}]

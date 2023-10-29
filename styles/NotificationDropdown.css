@@ -1,0 +1,21 @@
+.bell-icon {
+    position: relative;
+    cursor: pointer;
+}
+
+.badge {
+    position: absolute;
+    top: -5px;
+    right: -10px;
+    background: red;
+    color: white;
+    border-radius: 50%;
+}
+
+.dropdown {
+    position: absolute;
+    right: 0;
+    width: 200px;
+    border: 1px solid black;
+    background: white;
+}
